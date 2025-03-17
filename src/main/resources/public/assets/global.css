@@ -1,0 +1,261 @@
+/* ✅ GLOBAL STYLES */
+body {
+  background-color: #f3f2ef !important;
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ NAVBAR (USED ACROSS ALL PAGES) */
+.top-bar {
+  position: fixed; /* Ensures it stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures navbar stays above all content */
+}
+
+
+
+/* ✅ Ensure Logo Scales Correctly */
+.logo {
+  width: auto; /* Maintain aspect ratio */
+  height: 50px !important; /* Force size change */
+  max-height: 200px !important; /* Set a limit */
+  min-height: 50px; /* Ensure it doesn't shrink too much */
+  margin-left: 30px; /* Adjust positioning */
+  display: block; /* Prevent inline-block issues */
+}
+
+
+
+
+
+
+/* ==================================== */
+/* ✅ LOGIN & REGISTER PAGE STYLES */
+/* ==================================== */
+
+.login-container, 
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-box, 
+.register-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  /* margin-top: 30px; Space below navbar */
+}
+
+.login-title, 
+.register-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login-subtitle, 
+.register-subtitle {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin-bottom: 20px;
+}
+
+/* ✅ Input Fields */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ✅ SCOPED BUTTON STYLE FOR LOGIN & REGISTER ONLY */
+.login-container .btn-primary, 
+.register-container .btn-primary {
+  width: 100%;
+  background-color: #0073b1;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.login-container .btn-primary:hover, 
+.register-container .btn-primary:hover {
+  background-color: #005a8d;
+}
+
+/* ✅ ERROR MESSAGE */
+.alert {
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+}
+
+/* ✅ NAVIGATION LINKS (SIGN UP / LOGIN) */
+.signup-section, 
+.login-section {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link, 
+.login-link {
+  color: #0073b1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link:hover, 
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* ==================================== */
+/* ✅ ADMIN DASHBOARD STYLES */
+/* ==================================== */
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* ✅ DASHBOARD NAVBAR */
+.admin-dashboard .top-bar {
+  width: 100%;
+  background-color: #191919;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+}
+
+.admin-dashboard .platform-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ✅ DASHBOARD CONTENT WRAPPER */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+/* ✅ DASHBOARD CARDS */
+.dashboard-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ✅ FORM STYLING */
+.company-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.company-form .input-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+/* ✅ SCOPED BUTTON FOR ADMIN */
+.admin-dashboard .btn-primary {
+  background-color: #0073b1;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+}
+
+.admin-dashboard .btn-primary:hover {
+  background-color: #005a8d;
+}
+
+/* ✅ TABLE STYLES */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.company-table th, 
+.company-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.company-table th {
+  background-color: #0073b1;
+  color: white;
+}
+
+/* ✅ DELETE BUTTON */
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media screen and (max-width: 500px) {
+  .login-box, 
+  .register-box, 
+  .dashboard-card {
+    width: 90%;
+    padding: 30px;
+  }
+}
